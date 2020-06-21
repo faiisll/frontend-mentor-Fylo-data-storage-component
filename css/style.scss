@@ -1,0 +1,161 @@
+html{
+    font-family: 'Raleway', sans-serif;
+    
+    
+    --gradient-color1: hsl(6, 100%, 80%);
+    --gradient-color2: hsl(335, 100%, 65%);
+    
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayfish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark: hsl(229, 57%, 11%);
+}
+
+body{
+    margin: 0;
+    background-color: var(--very-dark);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    
+    
+    .bg{
+        position: absolute;
+        z-index: -99;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+.container{
+    display: flex;
+    width: 900px;
+    justify-content: space-between;
+    
+    margin-bottom: 20px;
+    
+    .left{
+        background-color: var(--dark-blue);
+        width: 230px;
+        height: 100px;
+        margin-top: 50px;
+        padding: 50px;
+        padding-top: 30px;
+        border-radius: 10px 100px 10px 10px;
+        
+        .icon-section{
+            width: 70%;
+            display: flex;
+            margin-top: 30px;
+            
+            .icon{
+                padding: 10px;
+                background-color: var(--very-dark);
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+            }
+            
+        }
+    }
+    
+    .right{
+        width: 540px;
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+        
+        
+        .storage-left{
+            top: 20px;
+            right: 50px;
+            position: absolute;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 99;
+            
+            h1{
+                margin: 0;
+                display: inline-block;
+            }
+            
+            h5{
+                margin: 0;
+                margin-left: 10px;
+                opacity: 0.6;
+                display: inline-block;
+            }
+            
+            .rec{
+                position: relative;
+                width: 100%;
+                
+                span{
+                    width: 0;
+                    height: 0;
+                    border-top: 30px solid red;
+                    border-left: 30px solid transparent;
+                    right: 0;
+                    
+                    position: absolute;
+                }
+            }
+        }
+        
+        .box{
+            width: 480px;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: var(--dark-blue);
+            color: white;
+            
+            p{
+                font-size: 14px;
+            }
+            
+            .storage-bar{
+                width: 100%;
+                height: 20px;
+                background-color: var(--very-dark);
+                border-radius: 10px;
+                
+                .bar{
+                    position: relative;
+                    top: 3px;
+                    left: 5px;
+                    width: 70%;
+                    height: 13px;
+                    margin-top: 15px;
+                    border-radius: 10px;
+                    background-image: linear-gradient(to right, var(--gradient-color1) , var(--gradient-color2));
+                    
+                    .dot{
+                        width: 10px;
+                        height: 10px;
+                        background-color: white;
+                        border-radius: 50%;
+                        position: absolute;
+                        right: 2px;
+                        top: 1px;
+                    }
+                }
+                
+            }
+            
+            .range{
+                display: flex;
+                justify-content: space-between;
+                
+                p{
+                    font-weight: 700;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+//900
