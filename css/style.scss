@@ -1,5 +1,6 @@
 html{
     font-family: 'Raleway', sans-serif;
+    height: 100%;
     
     
     --gradient-color1: hsl(6, 100%, 80%);
@@ -12,26 +13,24 @@ html{
 }
 
 body{
+    background-image: url('/images/bg-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 100%;
+
     margin: 0;
     background-color: var(--very-dark);
     display: grid;
     align-items: center;
     justify-items: center;
-    
-    
-    .bg{
-        position: absolute;
-        z-index: -99;
-        bottom: 0;
-        width: 100%;
-    }
+
 }
 
 .container{
     display: flex;
     width: 900px;
     justify-content: space-between;
-    
+    margin-top: 13%;
     margin-bottom: 20px;
     
     .left{
@@ -66,6 +65,16 @@ body{
         display: flex;
         flex-direction: column-reverse;
         position: relative;
+
+        .tri{
+            width: 0;
+            height: 0;
+            border-top: 30px solid white;
+            border-left: 30px solid transparent;
+            right: 50px;
+            top:75px;
+            position: absolute;
+        }
         
         
         .storage-left{
@@ -73,7 +82,7 @@ body{
             right: 50px;
             position: absolute;
             background-color: white;
-            padding: 20px;
+            padding: 15px 20px 15px 20px;
             border-radius: 10px;
             z-index: 99;
             
@@ -92,16 +101,6 @@ body{
             .rec{
                 position: relative;
                 width: 100%;
-                
-                span{
-                    width: 0;
-                    height: 0;
-                    border-top: 30px solid red;
-                    border-left: 30px solid transparent;
-                    right: 0;
-                    
-                    position: absolute;
-                }
             }
         }
         
@@ -159,3 +158,35 @@ body{
 }
 
 //900
+
+@media only screen and (max-width: 900px) {
+    .body{
+        background-image: url('/images/bg-mobile.svg');
+    }
+    .container{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 50px;
+
+        .right{
+            width: 330px;
+            margin-top: 20px;
+
+            .box{
+                width: 270px;
+                margin: 0px;
+            }
+
+            .storage-left{
+                position: absolute;
+                top: 130px;
+                right: 25%;
+            }
+        }
+    }
+
+    .tri{
+        display: none;
+    }
+} 
