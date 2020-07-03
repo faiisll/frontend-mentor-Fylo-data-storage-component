@@ -175,7 +175,7 @@ body {
 }
 
 @media only screen and (max-width: 900px) {
-  .body {
+  body {
     background-image: url("/images/bg-mobile.svg");
   }
   .container {
